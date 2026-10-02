@@ -361,7 +361,7 @@ function q_socialistNationalism() {
 }
 
 function q_nationalStruggle() {
-  q(q_socialistNationalism, "Should the national struggle be paramount to class struggle?", "Yes", () => r(q_nationalStruggle, "National Bolshevism (Karl Otto Paetel)"), "No", () => r(q_nationalStruggle, "National Bolshevism (Heinrich Laufenberg)"));
+  q(q_socialistNationalism, "Should the national struggle be paramount to class struggle?", "Yes", () => r(q_nationalStruggle, "National Bolshevism (Paetel)"), "No", () => r(q_nationalStruggle, "National Bolshevism (Laufenberg)"));
 }
 
 function q_immortalParty() {
@@ -625,7 +625,7 @@ function q_transition() {
 }
 
 function q_postPolitical() {
-  q(q_transition, "Is present-day society post-political?", "Yes", () => r(q_postPolitical, "Smiley Fascism"), "No", q_sovietAssociation);
+  q(q_transition, "Is present-day society post-political?", "Yes", () => r(q_postPolitical, "Smiley Facism"), "No", q_sovietAssociation);
 }
 
 function q_sovietAssociation() {
