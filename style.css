@@ -51,12 +51,6 @@ body {
   text-transform: none;
 }
 
-#subtitle {
-  margin-top: 5vmax;
-  margin-bottom: 1.5em;
-  text-align: center;
-}
-
 a {
   color: #66b3ff;
   text-decoration: none;
@@ -113,11 +107,6 @@ button:active {
 
 .btn-no:hover {
   background-color: #e53935;
-}
-
-.btn-icon {
-  font-weight: 900;
-  font-size: 1.1em;
 }
 
 /* Non-Yes/No buttons */
@@ -349,24 +338,6 @@ button:active {
     background-color: #e53935;
 }
 
-.btn-trade {
-    background-color: #1976d2;
-    box-shadow: 0 8px #0b3c78;
-}
-
-.btn-trade:hover {
-    background-color: #1e88e5;
-}
-
-.btn-military {
-    background-color: #c6a128;
-    box-shadow: 0 8px #7a5c00;
-}
-
-.btn-military:hover {
-    background-color: #fbc02d;
-}
-
 .result {
   min-height: 100vh;
   display: flex;
@@ -395,6 +366,68 @@ button:active {
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.flag-preview-trigger {
+  cursor: pointer;
+}
+
+.flag-preview-trigger:focus-visible {
+  outline: 3px solid #66b3ff;
+  outline-offset: 5px;
+}
+
+.flag-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(900px, 94vw);
+  max-height: 94vh;
+  padding: 22px;
+  border: 1px solid #777;
+  border-radius: 16px;
+  background: #151515;
+  color: #fff;
+  overflow: auto;
+}
+
+.flag-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.flag-dialog h2 {
+  margin-bottom: 16px;
+}
+
+.flag-dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: 65vh;
+  margin: auto;
+  object-fit: contain;
+}
+
+.flag-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.flag-dialog-actions button,
+.flag-download {
+  width: auto;
+  margin: 0;
+  padding: 0.7em 1em;
+  font-size: 1rem;
+}
+
+.flag-download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 45px;
 }
 
 .quote-box {
@@ -454,8 +487,10 @@ button:active {
   }
 
   .btn-nostate .btn-icon-left {
-    position: static; /* Allows icon and text to stack/flow cleanly on small screens */
+    position: static;
   }
+
+  .btn-nostate { white-space: normal; }
 
   .result button {
     font-size: 1.1em;
@@ -812,4 +847,427 @@ button:active {
 
 .btn-empirebuilding:hover {
   background-color: #c62828;
+}
+
+.btn-stateofficials {
+  background-color: #2f577e;
+  box-shadow: 0 8px #142f4b;
+}
+
+.btn-stateofficials:hover {
+  background-color: #386b9c;
+}
+.btn-socialelites {
+  background-color: #945320;
+  box-shadow: 0 8px #56300d;
+}
+
+.btn-socialelites:hover {
+  background-color: #ad672c;
+}
+.btn-economicleverage {
+  background-color: #a1681d;
+  box-shadow: 0 8px #5f3a0c;
+}
+
+.btn-economicleverage:hover {
+  background-color: #bb7c27;
+}
+.btn-militaryreadiness {
+  background-color: #526943;
+  box-shadow: 0 8px #2c3d22;
+}
+
+.btn-militaryreadiness:hover {
+  background-color: #637d51;
+}
+.btn-bureaucrats {
+  background-color: #556987;
+  box-shadow: 0 8px #28374d;
+}
+
+.btn-bureaucrats:hover {
+  background-color: #677da0;
+}
+.btn-nonparticipation {
+  background-color: #53688d;
+  box-shadow: 0 8px #283850;
+}
+
+.btn-nonparticipation:hover {
+  background-color: #657da7;
+}
+.btn-capitalistrealism {
+  background-color: #ab507c;
+  box-shadow: 0 8px #632447;
+}
+
+.btn-capitalistrealism:hover {
+  background-color: #c76190;
+}
+.btn-refusingwork {
+  background-color: #6485b7;
+  box-shadow: 0 8px #354e77;
+}
+
+.btn-refusingwork:hover {
+  background-color: #759aca;
+}
+.btn-worldparty {
+  background-color: #a8303e;
+  box-shadow: 0 8px #641623;
+}
+
+.btn-worldparty:hover {
+  background-color: #c23b4b;
+}
+.btn-multipleorganizations {
+  background-color: #a65a3d;
+  box-shadow: 0 8px #62301e;
+}
+
+.btn-multipleorganizations:hover {
+  background-color: #bf6a4a;
+}
+.btn-autonomouscommunes {
+  background-color: #576fb0;
+  box-shadow: 0 8px #2c3d72;
+}
+
+.btn-autonomouscommunes:hover {
+  background-color: #6c83c7;
+}
+.btn-formsoflife {
+  background-color: #8c60b5;
+  box-shadow: 0 8px #4d306f;
+}
+
+.btn-formsoflife:hover {
+  background-color: #a072cd;
+}
+.btn-cooperation {
+  background-color: #45916e;
+  box-shadow: 0 8px #22583f;
+}
+
+.btn-cooperation:hover {
+  background-color: #55a780;
+}
+.btn-variety {
+  background-color: #8556a6;
+  box-shadow: 0 8px #4b2b65;
+}
+
+.btn-variety:hover {
+  background-color: #9c68bc;
+}
+.btn-skill {
+  background-color: #b07631;
+  box-shadow: 0 8px #694312;
+}
+
+.btn-skill:hover {
+  background-color: #c48840;
+}
+.btn-revolutionarycoup {
+  background-color: #a13a47;
+  box-shadow: 0 8px #5f1825;
+}
+
+.btn-revolutionarycoup:hover {
+  background-color: #bb4756;
+}
+
+html, body { min-height: 100%; }
+[hidden] { display: none !important; }
+body { min-height: 100svh; overflow-x: hidden; }
+#title, #app { position: relative; z-index: 1; }
+#title { padding: 22px 20px 4px; }
+#logo {
+  width: auto;
+  max-width: 100%;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  letter-spacing: .025em;
+  line-height: 1.12;
+  color: #f4f4f4;
+  text-shadow: 0 4px 0 #414141, 0 8px 16px #000;
+}
+.version {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: auto;
+  bottom: 8px;
+  transform: none;
+  color: #eaeaea;
+  font-size: clamp(.7rem, 1.15vw, 1rem);
+  letter-spacing: .04em;
+  text-shadow: 0 2px 4px #000;
+}
+.logo-red { color: #ed282e; }
+.logo-green { color: #70c65b; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+body[data-view="home"]::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #000 url("assets/backgrounds/ideology-sorter-home.png") center top / cover no-repeat;
+  pointer-events: none;
+}
+body[data-view="home"] #title {
+  position: absolute;
+  top: clamp(22px, 6vh, 70px);
+  left: 0;
+  padding: 0 5vw;
+}
+body[data-view="home"] #logo { font-size: clamp(2.4rem, 7.2vw, 7.5rem); }
+.welcome {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vh, 20px);
+  padding: clamp(130px, 18vh, 210px) 18px 24px;
+}
+button { position: relative; isolation: isolate; }
+button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(160px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(255,255,255,.36), transparent 75%);
+  transition: opacity .22s ease;
+}
+button:hover::after, button:focus-visible::after { opacity: 1; }
+button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.home-button {
+  flex: 0 0 auto;
+  width: 90%;
+  max-width: 500px;
+  min-height: 0;
+  padding: .8em 1.5em;
+  margin: 0;
+  background: #292929;
+  box-shadow: 0 6px #111;
+  font-size: 1.4em;
+  border-radius: 12px;
+}
+.home-button:hover { background: #393939; }
+
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 40%, #161821 0, #07080b 68%, #030304 100%);
+}
+.ambient-orb {
+  position: absolute;
+  width: 68vmax;
+  height: 68vmax;
+  border-radius: 50%;
+  filter: blur(65px);
+  opacity: .27;
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+.ambient-orb-a { background: radial-gradient(circle, var(--ambient-a, #795d96), transparent 68%); left: -25%; top: -30%; }
+.ambient-orb-b { background: radial-gradient(circle, var(--ambient-b, #446e87), transparent 68%); right: -23%; top: -25%; animation-delay: -5s; }
+.ambient-orb-c { background: radial-gradient(circle, var(--ambient-c, #527d61), transparent 68%); left: 25%; bottom: -55%; animation-delay: -10s; }
+.ambient-orb-d { background: radial-gradient(circle, var(--ambient-d, #8b564d), transparent 68%); right: -22%; bottom: -48%; animation-delay: -7s; }
+.ambient-orb-e { background: radial-gradient(circle, var(--ambient-e, #5a628c), transparent 68%); left: -34%; bottom: -44%; animation-delay: -14s; }
+@keyframes ambient-drift { to { transform: translate(7%, 5%) scale(1.14); } }
+
+body[data-view="quiz"] #app, body[data-view="result"] #app { min-height: calc(100svh - 110px); display: grid; align-items: center; }
+body[data-view="create"] #app { min-height: calc(100svh - 110px); display: grid; align-items: center; }
+.quiz, .result { width: min(100%, 920px); margin: 0 auto; padding: 25px 20px 65px; }
+.quiz h1, .result h1 { font-size: clamp(1.4rem, 3vw, 2.3rem); line-height: 1.32; }
+.result { min-height: 0; }
+.create-page { padding-top: 32px; }
+.create-editable { cursor: pointer; border-radius: 10px; padding: 4px 12px; }
+.create-editable:hover, .create-editable:focus-visible,
+.create-flag:hover, .create-flag:focus-visible, .create-flag.drag-over {
+  outline: 3px solid #eee;
+  outline-offset: 5px;
+  filter: brightness(1.12);
+}
+.create-flag { position: relative; cursor: pointer; aspect-ratio: 3 / 2; }
+.create-flag .result-flag { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.create-page .quote-text::before { content: "“"; }
+.create-page .quote-text::after { content: "”"; }
+.create-page .quote-author::before { content: "— "; }
+
+.info-page, .tree-page { width: min(1060px, 100%); margin: 0 auto; padding: 36px 22px 70px; }
+.info-page h2, .tree-page h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom: 12px; }
+.info-card {
+  background: rgba(18, 21, 26, .82);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 15px;
+  margin: 15px auto;
+  padding: 19px 23px;
+  text-align: left;
+  box-shadow: 0 8px 30px #0003;
+}
+.info-card h3 { font-size: 1.06rem; text-align: left; margin-bottom: 6px; }
+.info-card p, .info-card a {
+  font-family: system-ui, sans-serif;
+  text-transform: none;
+  text-align: left;
+  line-height: 1.55;
+  font-size: 1rem;
+}
+.info-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 12px; }
+.contributor-links { gap: 0; }
+.contributor-links a { padding: 0 4px; }
+.info-page > button { width: min(240px, 100%); margin-top: 28px; }
+
+@media (max-width: 680px) {
+  body[data-view="home"]::before { background-size: 100% auto; }
+  body[data-view="home"] #title { top: 5vh; }
+  body[data-view="home"] #logo { font-size: clamp(1.5rem, 6vw, 3rem); }
+  body[data-view="home"] .version { font-size: .65rem; left: auto; right: 0; bottom: -15px; }
+  #logo { font-size: clamp(1.7rem, 7vw, 2.7rem); }
+  .welcome { padding-top: clamp(100px, 26vh, 200px); gap: 12px; }
+  .home-button { width: 92%; padding: .75em 1em; font-size: 1.05em; }
+  .tree-page, .info-page { padding: 24px 12px 45px; }
+}
+
+.tree-page { width: min(98vw, 2000px); padding-top: 28px; }
+.tree-info { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+.tree-info h2 { font-size: clamp(.95rem, 1.4vw, 1.25rem); line-height: 1.3; min-height: 2.7em; }
+.tree-finder { display: grid; justify-items: center; gap: 10px; }
+.tree-search {
+  width: min(100%, 530px);
+  padding: 12px 16px;
+  border: 1px solid #707070;
+  border-radius: 12px;
+  color: #fff;
+  background: #242424;
+  font: 1rem system-ui, sans-serif;
+  text-align: left;
+  text-transform: none;
+}
+.tree-view-result { width: min(220px, 100%); margin: 5px 0 0; padding: 10px; font-size: .9rem; }
+.tree-view-result:disabled { opacity: .42; cursor: default; }
+.tree-picker {
+  width: min(100%, 530px);
+  height: 70px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 15px;
+  color: #fff;
+  background: #414141;
+  box-shadow: 0 8px #252525;
+  font: 1rem "lemonmilk", sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+.tree-legend { display: flex; gap: 14px; justify-content: center; }
+.tree-legend-box {
+  display: grid;
+  place-items: center;
+  width: clamp(90px, 11vw, 170px);
+  height: 90px;
+  padding: 7px;
+  font-size: clamp(.8rem, 1.2vw, 1rem);
+  line-height: 1.1;
+  box-shadow: inset 0 -7px #0005;
+}
+.tree-legend-start { color: #111; background: #fff; }
+.tree-legend-question { background: #414141; }
+.tree-legend-result {
+  border-radius: 12px;
+  background: linear-gradient(#0005,#0005), url("assets/flags/Anarcho-Communism.svg") center / cover;
+  text-shadow: 0 2px 6px #000;
+}
+.tree-heading { margin: 38px 0 10px !important; font-size: clamp(2rem, 4vw, 3.2rem) !important; }
+.tree-root { display: flex; justify-content: center; margin: 36px auto 14px; }
+.tree-root-button { width: min(360px, 100%); background: #f4f4f4; color: #171717; font-size: 1rem; }
+.tree-root-button:hover { background: #fff; }
+.tree-branch { margin: 28px auto 58px; }
+.tree-branch-answer { display: inline-block; margin-right: 16px; padding: 5px 14px; border-radius: 8px; background: #3a9b4b; color: #fff; font-size: .75rem; vertical-align: middle; }
+.tree-branch:nth-of-type(2) .tree-branch-answer { background: #af3f47; }
+.tree-tools { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 6px 0 16px; }
+.tree-tool-button { width: auto; min-width: 55px; max-width: none; margin: 0; padding: 9px 15px; font-size: .9rem; }
+.tree-scroller {
+  height: min(71svh, 870px);
+  min-height: 380px;
+  overflow: auto;
+  border: 1px solid #ffffff22;
+  border-radius: 15px;
+  background: #0a0a0a;
+  overscroll-behavior: contain;
+  scrollbar-color: #555 #171717;
+}
+.tree-canvas { position: relative; }
+.tree-stage { position: absolute; left: 0; top: 0; transform-origin: top left; }
+.tree-links { position: absolute; left: 0; top: 0; pointer-events: none; }
+.tree-answer-label {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  min-height: 24px;
+  padding: 3px;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  color: #fff;
+  font: 700 8px/1.12 "lemonmilk", sans-serif;
+  text-shadow: 0 1px 3px #000;
+  box-shadow: 0 2px 5px #0008;
+  pointer-events: none;
+}
+.tree-cell {
+  position: absolute;
+  z-index: 3;
+  width: 156px;
+  max-width: none;
+  height: 78px;
+  margin: 0;
+  padding: 7px;
+  overflow: hidden;
+  border-radius: 5px;
+  font: 700 9px/1.15 "lemonmilk", sans-serif;
+  box-shadow: inset 0 -7px #0005;
+  overflow-wrap: anywhere;
+  transition: filter .15s, transform .15s;
+}
+.tree-cell:hover { filter: brightness(1.2); transform: scale(1.04); z-index: 5; }
+.tree-cell::after { display: none; }
+.tree-question-cell { background: #444; }
+.tree-start-cell { color: #101010; background: #fff; }
+.tree-result-cell { border-radius: 9px; background: #252525; font-size: 10px; }
+.tree-result-cell img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #252525; }
+.tree-result-cell::before { content: ""; position: absolute; inset: 0; background: #0006; z-index: 1; }
+.tree-result-cell span { position: relative; z-index: 2; text-shadow: 0 1px 3px #000, 0 0 7px #000; }
+.tree-search-active .tree-cell:not(.tree-route),
+.tree-search-active .tree-links path:not(.tree-route) { opacity: .24; }
+.tree-cell.tree-route { opacity: 1; }
+.tree-links path.tree-route { stroke-width: 7; opacity: 1; }
+.tree-cell.tree-located { z-index: 6; outline: 5px solid #f8d75d; outline-offset: 3px; filter: brightness(1.18); }
+.tree-home-button { width: min(260px, 100%); }
+@media (max-width: 700px) {
+  .tree-info { grid-template-columns: 1fr; gap: 24px; }
+  .tree-info h2 { min-height: 0; }
+  .tree-legend-box { flex: 1; width: auto; height: 64px; }
+  .tree-picker { height: 58px; }
+  .tree-scroller { height: 65svh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb { animation: none; }
+  button, button::after { transition: none; }
 }

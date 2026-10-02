@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IdeoSorter</title>
+  <title>IDEOLOGY SORTER</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logos/embed.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-view="home">
+  <div id="ambient-background" class="ambient-background" aria-hidden="true" hidden>
+    <div class="ambient-orb ambient-orb-a"></div>
+    <div class="ambient-orb ambient-orb-b"></div>
+    <div class="ambient-orb ambient-orb-c"></div>
+    <div class="ambient-orb ambient-orb-d"></div>
+    <div class="ambient-orb ambient-orb-e"></div>
+  </div>
   <header id="title">
     <div id="title-inner">
-      <img src="./assets/logos/title.svg" id="logo" alt="IdeoSorter" />
-      <div class="version">V4.0</div>
+      <h1 id="logo" aria-label="IDEOLOGY SORTER">IDE<span class="logo-red">O</span>L<span class="logo-green">O</span>GY SORTER</h1>
+      <span class="version">V4.0</span>
     </div>
-    <h1 id="subtitle">Discover your political ideology in a few questions!</h1>
   </header>
 
-  <div id="app"></div>
+  <main id="app"></main>
 
   <script src="makeButton.js"></script>
   <script src="script.js"></script>
+  <script src="interface.js"></script>
+  <script src="tree.js"></script>
 </body>
 </html>

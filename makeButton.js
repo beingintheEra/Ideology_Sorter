@@ -1,6 +1,6 @@
-// Button creation is kept separate from the quiz flow.
 function makeButton(label, onClick) {
   const btn = document.createElement("button");
+  btn.type = "button";
   const lower = label.toLowerCase();
 
   if (lower === "yes") {
@@ -16,10 +16,10 @@ function makeButton(label, onClick) {
       <img class="btn-icon-img" src="./assets/buttons/no.svg" alt="">
       ${label}
     `;
-  } else if (lower === "the revolution does not have an organizational model") {
+  } else if (lower === "the revolution is the proletarian organization itself") {
     btn.classList.add("btn-organizational");
     btn.innerHTML = `
-      <img class="btn-icon-img" src="./assets/buttons/no.svg" alt="">
+      <img class="btn-icon-img" src="./assets/buttons/group.svg" alt="">
       ${label}
     `;
   } else if (lower === "the state should not exist") {
@@ -167,7 +167,7 @@ function makeButton(label, onClick) {
       <img class="btn-icon-img" src="./assets/buttons/landownership.svg" alt="">
       ${label}
     `;
-  } else if (lower === "shareholding" || lower === "share holding") {
+  } else if (lower === "shareholding") {
     btn.classList.add("btn-shareholding");
     btn.innerHTML = `
       <img class="btn-icon-img" src="./assets/buttons/shareholding.svg" alt="">
@@ -201,18 +201,6 @@ function makeButton(label, onClick) {
     btn.classList.add("btn-aggressively");
     btn.innerHTML = `
       <img class="btn-icon-img" src="./assets/buttons/aggressively.svg" alt="">
-      ${label}
-    `;
-  } else if (lower === "trade") {
-    btn.classList.add("btn-trade");
-    btn.innerHTML = `
-      <img class="btn-icon-img" src="./assets/buttons/trade.svg" alt="">
-      ${label}
-    `;
-  } else if (lower === "military") {
-    btn.classList.add("btn-military");
-    btn.innerHTML = `
-      <img class="btn-icon-img" src="./assets/buttons/military.svg" alt="">
       ${label}
     `;
   } else if (lower === "planned development") {
@@ -391,10 +379,111 @@ function makeButton(label, onClick) {
       <img class="btn-icon-img" src="./assets/buttons/mythology.svg" alt="">
       ${label}
     `;
+  } else if (lower === "state officials") {
+    btn.classList.add("btn-stateofficials");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/state officials.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "social elites") {
+    btn.classList.add("btn-socialelites");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/social elites.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "economic leverage") {
+    btn.classList.add("btn-economicleverage");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/economic leverage.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "military readiness") {
+    btn.classList.add("btn-militaryreadiness");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/military readiness.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "bureaucrats") {
+    btn.classList.add("btn-bureaucrats");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/state officials.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "peaceful non-participation") {
+    btn.classList.add("btn-nonparticipation");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/hide.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "overcoming capitalist realism") {
+    btn.classList.add("btn-capitalistrealism");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/show.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "refusing work") {
+    btn.classList.add("btn-refusingwork");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/none.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "one world party") {
+    btn.classList.add("btn-worldparty");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/group.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "multiple communist organizations") {
+    btn.classList.add("btn-multipleorganizations");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/cooperation.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "autonomous communes") {
+    btn.classList.add("btn-autonomouscommunes");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/create.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "forms of life") {
+    btn.classList.add("btn-formsoflife");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/home.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "cooperation") {
+    btn.classList.add("btn-cooperation");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/cooperation.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "variety") {
+    btn.classList.add("btn-variety");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/variety.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "skill") {
+    btn.classList.add("btn-skill");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/skill.svg" alt="">
+      ${label}
+    `;
+  } else if (lower === "a revolutionary coup") {
+    btn.classList.add("btn-revolutionarycoup");
+    btn.innerHTML = `
+      <img class="btn-icon-img" src="./assets/buttons/coup.svg" alt="">
+      ${label}
+    `;
   } else {
     btn.textContent = label;
   }
 
+  btn.addEventListener("pointermove", event => {
+    const bounds = btn.getBoundingClientRect();
+    btn.style.setProperty("--glow-x", `${event.clientX - bounds.left}px`);
+    btn.style.setProperty("--glow-y", `${event.clientY - bounds.top}px`);
+  });
   btn.addEventListener("click", onClick);
   return btn;
 }
