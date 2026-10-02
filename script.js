@@ -14,15 +14,6 @@ const state = {
   history: []
 };
 
-const RESULT_FLAG_ALIASES = Object.freeze({
-  "National Bolshevism (Limonov)": "Limonovism",
-  "National Bolshevism (Karl Otto Paetel)": "National Bolshevism (Paetel)",
-  "National Bolshevism (Heinrich Laufenberg)": "National Bolshevism (Laufenberg)",
-  "Smiley Fascism": "Smiley Facism",
-  "Communization (Troploin)": "Communization (Dauve)",
-  "Falangism (Primo De Rivera)": "Falangism"
-});
-
 document.addEventListener("DOMContentLoaded", async () => {
   await loadIdeologies();
   renderWelcome();
