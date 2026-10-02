@@ -1,4 +1,4 @@
-# LeftwtSorter
+# Ideology Sorter
 
 ![Ideology Sorter icon](assets/logos/embed.svg)
 
