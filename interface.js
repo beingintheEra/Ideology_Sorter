@@ -1,7 +1,7 @@
 const treeState = { graph: null, zoom: .85, selectedResult: null };
 
 function getFlagUrl(name) {
-  const localName = RESULT_FLAG_ALIASES[name] ?? name;
+  const localName = name;
   return `./assets/flags/${encodeURIComponent(localName)}.svg`;
 }
 
